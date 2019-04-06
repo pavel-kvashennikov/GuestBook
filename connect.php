@@ -1,6 +1,6 @@
 <?php
 define(host,'localhost');
-define(name,'test');
+define(name,'guestbook');
 define(user,'root');
 define(password, '123456Zz!');
 use PDO;
@@ -11,7 +11,6 @@ class db {
     public function __construct(){
         try{
             $this->db = new PDO('mysql:host='.host.';dbname='.name.'', user, password);
-            echo '123';
         }
         catch(PDOException $e) {
             echo $e->getMessage();

@@ -22,9 +22,3 @@ class db {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-
-class message{
-    public $name;
-    public $date;
-    public $text;
-}

@@ -14,9 +14,11 @@
         <input type="text" name="name" id="name" placeholder="Введите имя">
         <input type="text" name="message" id="message" placeholder="Введите текст">
         <button id="btn">Отправить</button>
-        <button id="btn1">получить</button>
     </form>
-    <div id="one"></div>
+    <?php
+        require_once('message.php');
+        $message = new message();
+    ?>
 </body>
 
 

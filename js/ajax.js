@@ -1,6 +1,3 @@
-var $ = jQuery.noConflict();
-
-
 $(document).ready(function() {
 
     $('#btn').click (function(){
@@ -17,6 +14,5 @@ $(document).ready(function() {
         });
 
     });
-
 
 });

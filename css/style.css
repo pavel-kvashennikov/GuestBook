@@ -2,5 +2,19 @@ textarea{
     resize: none;
 }
 .mes{
-    border: solid 2px blue;
+
+    word-wrap: break-word;
+    margin-bottom: 15px;
+}
+.mes h3{
+    margin:10px 0px;
+}
+.mes h5{
+    margin:10px 0px;
+}
+.mes p{
+    margin:10px 0px;
+}
+.mes hr{
+    margin:0px 0px;
 }

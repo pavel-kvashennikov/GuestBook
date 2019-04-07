@@ -13,7 +13,7 @@ $(document).ready(function() {
                     '<h3>' + (data[i].name) + '</h3>' +
                     '<h5>' + (data[i].data) + '</h5>' +
                     '<p>' + (data[i].text) + '</p>' +
-                    '</div>';
+                    '</div>' +'<hr>';
             }
         }
 

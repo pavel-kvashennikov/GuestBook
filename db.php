@@ -22,3 +22,15 @@ class db {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
+
+class message
+{
+    public $message=[];
+
+    public function __construct(){
+        $db = new db();
+        $sql = "SELECT * FROM posts ORDER BY id DESC";
+        $result=$db->query($sql);
+        $this->message=$result;
+    }
+}

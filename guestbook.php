@@ -6,19 +6,30 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/ajax.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Guest book</title>
 </head>
 <body>
-    <form method="post" action="#">
-        <input type="text" name="name" id="name" placeholder="Введите имя">
-        <input type="text" name="message" id="message" placeholder="Введите текст">
-        <button id="btn">Отправить</button>
-    </form>
-    <?php
-        require_once('message.php');
-        $message = new message();
-    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <form method="post" action="#">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Введите ваше имя</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Введите ваше сообщение</label>
+                        <textarea class="form-control" name="message" id="message"  rows="3"></textarea>
+                    </div>
+                    <button id="btn" class="btn btn-primary mb-2">Отправить</button>
+                </form>
+                <div id="messages">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 

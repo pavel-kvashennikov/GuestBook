@@ -14,20 +14,19 @@
     <div class="container">
         <div class="row">
             <div class="col-8 offset-2">
-                <form method="post" action="#">
+                <form method="post" action="#" id="form">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Введите ваше имя</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Ваше имя">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Не менее трех символов" pattern="[A-Za-zА-Яа-яЁё]{3,}" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Введите ваше сообщение</label>
-                        <textarea class="form-control" name="message" id="message"  rows="3"></textarea>
+                        <label for="exampleFormControlTextarea1">Введите ваше сообщение (не менее 15 сим.)</label>
+                        <textarea class="form-control" name="message" id="message"  rows="3" required></textarea>
                     </div>
-                    <button id="btn" class="btn btn-primary mb-2">Отправить</button>
+                    <input type="submit" id="btn" class="btn btn-primary mb-2">
                 </form>
                 <div id="messages">
                 </div>
-                <button id="test">test</button>
             </div>
         </div>
     </div>

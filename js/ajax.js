@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#btn').click (function(){
+    $('#form').submit (function(){
 
         $.ajax({
             url:"post.php",
@@ -8,14 +8,17 @@ $(document).ready(function() {
             cache:false,
             data:{ name:$('#name').val(), message:$('#message').val() }, // Отправка
             success: function (data) {
-                $('#one').html(data);
+                if (data !="") alert('Введите в сообщение не менее 15 символов');
             }
 
         });
     return false;
     });
+    $('#test').click(function(){
+        $('.alert').alert();
+    });
 
-    function test(){
+    function polling(){
         $.ajax({
             url:"getposts.php",
             type:"GET",
@@ -37,6 +40,6 @@ $(document).ready(function() {
         });
     }
 
-    setInterval(test,2000);
+    setInterval(polling,1000);
 
 });
